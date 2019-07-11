@@ -11,19 +11,31 @@ And search these on the searchbox.
 ## Please check:
 
 1. the interface below (already simpler than the normal one ofc) 
-2. the twitter api https://developer.twitter.com/en/docs/api-reference-index.html
-
-## Technical Requisites:
+2. the Twitter api https://developer.twitter.com/en/docs/api-reference-index.html
+3. Choose which language to use below
+## Technical Requisites JS:
 
 1. React with hooks
-2. Ramda (instead of pure map, reduce, forEach)
-3. Styled-components
-4. Axios
+2. Ramda
+3. styled-components
+4. Use TypeScript
+
+
+Don't
+- No for or while loops.
+- No mutability
+
+## Technical Requisites Reason:
+
+1. ReasonReact with hooks
+2. BuckleScript Belt
+3. reason-apollo-hooks
+4. OneGraph
 
 ## Plus
 
-Search all tweets by tweet(text)
-Use Typescript
+Search all tweets by tweet (text)
+
 
 ## Layout 
 
