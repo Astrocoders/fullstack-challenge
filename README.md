@@ -1,6 +1,6 @@
-# Astrocoders Frontend Test
+# Astrocoders Fullstack Challenge
 
-Hi, thanks for trying out our test!
+Hi, thanks for trying out our challenge!
 Hopefully you'll learn a lot, create an awesome project and join Astrocoders.
 
 We want to evaluate your knowledge you already have for React. And the ability to learn new techs.
