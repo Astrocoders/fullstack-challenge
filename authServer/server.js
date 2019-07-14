@@ -8,6 +8,9 @@ const session = require('express-session')
 const cors = require('cors')
 const socketio = require('socket.io')
 
+const authRouter = require('./lib/auth.router')
+const passportInit = require('./lib/passport.init')
+
 const app = express()
 
 const server = http.createServer(app)
@@ -15,7 +18,7 @@ const server = http.createServer(app)
 app.use(express.json())
 app.use(passport.initialize())
 
-//passportInit()
+passportInit()
 
 app.use(cors())
 
@@ -29,7 +32,7 @@ const io = socketio(server)
 
 app.set('io', io)
 
-app.use('/', (req, res) => res.send('ლ(ಠ益ಠ)ლ'))
+app.use('/', authRouter)
 
 server.listen(process.env.PORT || 8080, () => {
     console.log('ლ(ಠ益ಠ)ლ')
