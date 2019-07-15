@@ -2,7 +2,7 @@
 
 Hi, thank you for taking on our challenge! We hope that you'll learn a lot, create an awesome project and join the Astrocoders team.
 
-In this test, we will evaluate the knowledge you already have about ReactJS and your ability to learn new technologies. In order to complete it, you must develop a Gmail interface that loads the last forty tweets containing the **#mars** hashtag and enables the user to filter them using the searchbox.
+In this test, we will evaluate the knowledge you already have about ReactJS and your ability to learn new technologies. In order to complete it, you must develop a Gmail interface that loads the last 40 (forty) tweets containing the **#mars** hashtag and enables the user to filter them using the search box.
 
 ## Please check:
 
