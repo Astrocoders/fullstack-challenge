@@ -15,7 +15,7 @@ In this test, we will evaluate the knowledge you already have about ReactJS and 
 1. ReactJS with Hooks (https://reactjs.org/);
 2. Ramda (https://ramdajs.com);
 3. styled-components (https://styled-components.com);
-4. Use TypeScript (https://www.typescriptlang.org/);
+4. TypeScript (https://www.typescriptlang.org/);
 
 Don't
 - Use `for` or `while` loops;
