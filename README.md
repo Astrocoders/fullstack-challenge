@@ -1,42 +1,38 @@
 # Astrocoders Fullstack Challenge
 
-Hi, thanks for trying out our challenge!
-Hopefully you'll learn a lot, create an awesome project and join Astrocoders.
+Hi, thank you for taking on our challenge! We hope that you'll learn a lot, create an awesome project and join the Astrocoders team.
 
-We want to evaluate your knowledge you already have for React. And the ability to learn new techs.
-
-We want a Gmail interface that loads the last 40 tweets with the hashtag #mars.
-And search these on the searchbox.
+In this test, we will evaluate the knowledge you already have about ReactJS and your ability to learn new technologies. In order to complete it, you must develop a Gmail interface that loads the last 40 (forty) tweets containing the **#mars** hashtag and enables the user to filter them using the search box.
 
 ## Please check:
 
-1. the interface below (already simpler than the normal one ofc) 
-2. the Twitter api https://developer.twitter.com/en/docs/api-reference-index.html
-3. Choose which language to use below
-## Technical Requisites JS:
+1. The interface that is in the [Layout](#layout) section (which already is simpler than the normal one, of course);
+2. The Twitter API (https://developer.twitter.com/en/docs/api-reference-index.html);
+3. The Technical Requisites for your preferred technology that are listed just below.
 
-1. React with hooks
-2. Ramda (https://ramdajs.com)
-3. styled-components (https://styled-components.com)
-4. Use TypeScript (https://www.typescriptlang.org/)
+## Technical Requisites for JavaScript:
 
+1. ReactJS with Hooks (https://reactjs.org/);
+2. Ramda (https://ramdajs.com);
+3. styled-components (https://styled-components.com);
+4. TypeScript (https://www.typescriptlang.org/);
 
 Don't
-- No for or while loops;
-- No mutability.
+- Use `for` or `while` loops;
+- Mutate variables.
 
-## Technical Requisites Reason:
+## Technical Requisites for ReasonML:
 
-1. ReasonReact with hooks (https://reasonml.github.io/reason-react/)
-2. BuckleScript Belt (https://bucklescript.github.io/bucklescript/api/Belt.html)
-3. reason-apollo-hooks (https://github.com/Astrocoders/reason-apollo-hooks)
-4. OneGraph (https://onegraph.com) or Prisma
+1. ReasonReact with Hooks (https://reasonml.github.io/reason-react/);
+2. BuckleScript Belt (https://bucklescript.github.io/bucklescript/api/Belt.html);
+3. reason-apollo-hooks (https://github.com/Astrocoders/reason-apollo-hooks);
+4. OneGraph (https://onegraph.com) or Prisma.
 
 ## Plus
 
-Search all tweets by tweet (text)
+Open a tweet to see replies.
 
-## Layout 
+## Layout
 
 ![screen shot 2019-01-10 at 15 26 53](https://user-images.githubusercontent.com/4806269/50987231-2f502980-14f0-11e9-9f3b-c52ef553a3d2.png)
 
