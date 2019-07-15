@@ -30,7 +30,7 @@ Don't
 
 ## Plus
 
-Search all tweets by tweet (text).
+Open a tweet to see replies.
 
 ## Layout
 
