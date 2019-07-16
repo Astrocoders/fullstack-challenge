@@ -3,7 +3,7 @@ const router = express.Router()
 const passport = require('passport')
 const authController = require('./auth.controller')
 
-const twitterAuth = passport.authenticate('twitter');
+const twitterAuth = passport.authenticate('twitter')
 
 router.get('/twitter/callback', twitterAuth, authController.twitter)
 
