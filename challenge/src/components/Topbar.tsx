@@ -1,7 +1,7 @@
 import * as React from "react";
 import styled from "styled-components";
 import { Menu } from "styled-icons/material/Menu";
-import {Tweets} from './Tweets'
+import Tweets from './Tweets'
 
 const Wrapper = styled.header`
   height: 4rem;
@@ -10,6 +10,7 @@ const Wrapper = styled.header`
   flex-direction: row;
   align-items: center;
   justify-content: flex-start;
+  width: 100%;
 `;
 
 const Gmail = styled.img.attrs({
@@ -63,7 +64,7 @@ const Topbar: React.FC = () => {
           <MenuIcon />
           <Gmail />
         </LogoWrapper>
-        <SearchBox placeholder="#mars" />
+        <SearchBox placeholder="Search tweets" />
       </Wrapper>
       <Tweets />
     </>

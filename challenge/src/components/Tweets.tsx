@@ -1,5 +1,7 @@
-import * as React from 'react'
+import * as React from "react";
 
-export const Tweets: React.FC = () => {
-    return <>adkjfaldkjflakdsjf</>
-}
+const Tweets: React.FC = () => {
+  return <></>;
+};
+
+export default Tweets;
