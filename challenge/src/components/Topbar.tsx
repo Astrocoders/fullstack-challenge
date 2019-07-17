@@ -1,7 +1,7 @@
 import * as React from "react";
 import styled from "styled-components";
 import { Menu } from "styled-icons/material/Menu";
-import Tweets from './Tweets'
+import Tweets from "./Tweets";
 
 const Wrapper = styled.header`
   height: 4rem;
@@ -25,29 +25,6 @@ const MenuIcon = styled(Menu)`
   height: 1.5rem;
 `;
 
-const SearchBox = styled.input.attrs({
-  type: "text"
-})`
-  border: 0;
-  outline: 0;
-  background-color: #f2f3f5;
-  width: 40rem;
-  padding: 1rem;
-  font-size: 1rem;
-  color: #000107;
-  border-radius: 0.5rem;
-  margin: auto 2rem;
-  transition: box-shadow 0.2s;
-  transition: background-color 0.2s;
-
-  :focus {
-    background-color: #ffffff;
-    -webkit-box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.3);
-    -moz-box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.3);
-    box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.3);
-  }
-`;
-
 const LogoWrapper = styled.div`
   box-sizing: border-box;
   display: flex;
@@ -56,7 +33,7 @@ const LogoWrapper = styled.div`
   width: 15rem;
 `;
 
-const Topbar: React.FC = () => {
+const Topbar: React.FC = ({ children }) => {
   return (
     <>
       <Wrapper>
@@ -64,7 +41,7 @@ const Topbar: React.FC = () => {
           <MenuIcon />
           <Gmail />
         </LogoWrapper>
-        <SearchBox placeholder="Search tweets" />
+        {children}
       </Wrapper>
       <Tweets />
     </>
