@@ -1,7 +1,6 @@
 import * as React from "react";
 import styled from "styled-components";
 import { Menu } from "styled-icons/material/Menu";
-import Tweets from "./Tweets";
 
 const Wrapper = styled.header`
   height: 4rem;
@@ -43,7 +42,6 @@ const Topbar: React.FC = ({ children }) => {
         </LogoWrapper>
         {children}
       </Wrapper>
-      <Tweets />
     </>
   );
 };

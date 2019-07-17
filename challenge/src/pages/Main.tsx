@@ -1,7 +1,8 @@
 import * as React from "react";
 import Topbar from "../components/Topbar";
 import Sidebar from "../components/Sidebar";
-import styled from 'styled-components';
+import Tweets from "../components/Tweets";
+import styled from "styled-components";
 
 const Input = styled.input.attrs({
   type: "text"
@@ -26,15 +27,22 @@ const Input = styled.input.attrs({
   }
 `;
 
+const Layout = styled.div`
+  display: flex;
+`;
+
 const Main: React.FC = () => {
   const [query, setQuery] = React.useState<string>("#mars");
 
   return (
     <>
       <Topbar>
-        <Input value={query} onChange={(e) => setQuery(e.target.value)}/>
+        <Input value={query} onChange={e => setQuery(e.target.value)} />
       </Topbar>
-      <Sidebar />
+      <Layout>
+        <Sidebar />
+        <Tweets query={query} />
+      </Layout>
     </>
   );
 };
