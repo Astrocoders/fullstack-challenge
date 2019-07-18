@@ -1,4 +1,5 @@
 import * as React from "react";
+import * as R from "ramda";
 import styled from "styled-components";
 import { useQuery } from "@apollo/react-hooks";
 import gql from "graphql-tag";
@@ -17,7 +18,6 @@ interface Tweet {
   id: string;
   text: string;
   created_at: string;
-  username: string;
   user: TwitterUser;
 }
 
@@ -44,30 +44,28 @@ const Tweets: React.FC<Props> = ({ query }: Props) => {
   });
 
   React.useEffect(() => {
-    const onSearch = () => {
-      setTweetsList(data.twitter.search);
-    };
+    const isDone = R.ifElse(
+      R.has("twitter"),
+      () => setTweetsList(data.twitter.search),
+      () => null
+    );
 
-    if (!loading && data) {
-      onSearch();
-    }
+    isDone(data);
   }, [data, loading]);
 
-  console.log(tweetsList);
+  const twts = R.map((tw: Tweet) => (
+    <div key={tw.id}>
+      <span>{tw.user.name}</span>
+      <span>{tw.text}</span>
+      <span>{tw.created_at}</span>
+    </div>
+  ));
+
+  const Loading = R.always("Loading...");
 
   return (
     <>
-      <Wrapper>
-        {loading ? (
-          <>loading...</>
-        ) : (
-          <div>
-            {tweetsList.map(t => (
-              <p key={t.id}>{t.text}</p>
-            ))}
-          </div>
-        )}
-      </Wrapper>
+      <Wrapper>{loading ? Loading() : <div>{twts(tweetsList)}</div>}</Wrapper>
     </>
   );
 };
