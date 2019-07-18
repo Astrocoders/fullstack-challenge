@@ -24,7 +24,7 @@ interface Tweet {
 const FETCH_TWEETS = gql`
   query searchTweets($q: String!) {
     twitter {
-      search(q: $q, result_type: recent, count: 5) {
+      search(q: $q, result_type: recent, count: 40) {
         id
         text
         created_at
