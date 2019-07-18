@@ -10,6 +10,7 @@ const Wrapper = styled.div`
   height: calc(100vh - 4rem);
   background-color: #ffffff;
   width: 17rem;
+  flex: 1;
 `;
 
 const WriteButton = styled.button`
@@ -23,6 +24,10 @@ const WriteButton = styled.button`
   -webkit-box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.3);
   -moz-box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.3);
   box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.3);
+  margin: 1rem;
+  align-self: flex-start;
+  color: #5c5253; 
+  font-size: .8rem;
 
   transition: box-shadow 0.2s;
 
