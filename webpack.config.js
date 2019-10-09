@@ -17,6 +17,21 @@ module.exports = {
       inject: false
     })
   ],
+  module: {
+    rules: [
+      {
+        test: /\.png$/,
+        use: [{
+          loader: 'file-loader'
+        }]
+      },
+    ],
+  },
+  resolve: {
+    alias: {
+      assets: path.resolve(__dirname, 'assets/')
+    }
+  },
   devServer: {
     compress: true,
     contentBase: outputDir,
