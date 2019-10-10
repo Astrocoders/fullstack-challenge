@@ -1,14 +1,7 @@
 open Utils;
+open Utils.Assets;
 
 requireStyle("styles/SideMenu.css");
-
-let inboxIcon = requireAsset("assets/inboxIcon.png");
-let snoozedIcon = requireAsset("assets/clockIcon.png");
-let starIcon = requireAsset("assets/starIcon.png");
-let flagIcon = requireAsset("assets/flagIcon.png");
-let sentIcon = requireAsset("assets/sentIcon.png");
-let draftIcon = requireAsset("assets/draftIcon.png");
-let markIcon = requireAsset("assets/flagIcon.png");
 
 [@react.component]
 let make = () =>

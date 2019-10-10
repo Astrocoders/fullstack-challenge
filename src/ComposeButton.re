@@ -1,7 +1,7 @@
 open Utils;
+open Utils.Assets;
 
 requireStyle("styles/ComposeButton.css");
-let creatMailIcon = requireAsset("assets/createMailIcon.png");
 
 [@react.component]
 let make = () => {

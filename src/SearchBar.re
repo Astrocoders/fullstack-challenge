@@ -1,10 +1,7 @@
 open Utils;
+open Utils.Assets;
 
 requireStyle("styles/SearchBar.css");
-
-let searchIcon = requireAsset("assets/magnifyingGlass.png");
-let closeIcon = requireAsset("assets/closeIcon.png");
-let dropdownIcon = requireAsset("assets/dropdowIcon.png");
 
 [@react.component]
 let make = () =>

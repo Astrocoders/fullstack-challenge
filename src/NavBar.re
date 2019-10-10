@@ -1,9 +1,7 @@
 open Utils;
+open Utils.Assets;
 
 requireStyle("styles/NavBar.css");
-let logo = requireAsset("assets/logoGmail.png");
-let sndwichMenu = requireAsset("assets/sandwichMenuIcon.png");
-let appMenu = requireAsset("assets/appMenuIcon.png");
 
 [@react.component]
 let make = () =>

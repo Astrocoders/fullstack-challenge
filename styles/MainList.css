@@ -1,0 +1,9 @@
+.mainList {
+    flex-grow: 1;
+}
+
+.listHeader {
+    height: 48px;
+    margin-right: 36px;
+    border-bottom: 2px solid #eeeeee;
+}
