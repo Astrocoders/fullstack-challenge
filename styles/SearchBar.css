@@ -1,0 +1,16 @@
+.searchBar {
+    display: flex;
+    align-items: center;
+    vertical-align: middle;
+    flex-basis: 60%;
+    padding: 0 8px;
+    border-radius: 6px;
+    background-color: #eeeeee;
+}
+
+.searchInput {
+    flex-grow: 1;
+    border: none;
+    background-color: #efefef;
+    font-family: 'Roboto', sans-serif, Helvetica, Arial;
+} 

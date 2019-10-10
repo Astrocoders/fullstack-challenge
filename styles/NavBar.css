@@ -1,0 +1,33 @@
+.navBar {
+    box-sizing: border-box;
+    height: 64px;
+    width: 100%;
+    min-width: min-content;
+
+    padding: 8px;
+    border-bottom: 2px solid #eeeeee;
+
+    display: flex;
+    justify-content: space-between;
+    vertical-align: middle;
+}
+
+.menuArea {
+    padding-left: 16px;
+    display: flex;
+    flex-basis: 250px;
+    justify-content: start;
+}
+
+.logo {
+    height: 40px;
+    width: 109px;
+    padding-left: 8px;
+}
+
+.userArea {
+    padding-right: 16px;
+    display: flex;
+    flex-basis: 150px;
+    justify-content: space-between;
+}
