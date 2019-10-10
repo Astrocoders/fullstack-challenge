@@ -1,0 +1,9 @@
+.sideMenu {
+    padding: 16px 0px;
+    flex-basis: 250px;
+}
+
+.listSideMenu {
+    list-style: none;
+    padding-left: 0;
+}

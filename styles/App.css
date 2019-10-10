@@ -6,3 +6,8 @@ body {
     font-family: 'Roboto', sans-serif, Helvetica, Arial;
     font-size: 14px;
 }
+
+#root {
+    display: flex;
+    flex-wrap: wrap;
+}
