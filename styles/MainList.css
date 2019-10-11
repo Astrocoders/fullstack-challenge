@@ -5,5 +5,19 @@
 .listHeader {
     height: 48px;
     margin-right: 36px;
+    padding-left: 16px;
     border-bottom: 2px solid #eeeeee;
+    display: flex;
+    align-items: center;
+}
+
+.list {
+    padding-left: 16px;
+    padding-right: 50px;
+}
+
+.listFooter {
+    margin: 64px;
+    font-size: 0.875em;
+    text-align: center;
 }

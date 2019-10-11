@@ -1,0 +1,29 @@
+.listItem {
+    list-style: none;
+    border-bottom: 2px solid #eeeeee;
+    display: flex;
+}
+
+.listInfo {
+    line-height: 40px;
+    padding-left: 24px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.info {
+    flex-grow: 1;
+}
+
+.infoTitle {
+    flex-basis: 30%
+}
+
+.infoContent {
+    flex-basis: 40%
+}
+
+.infoData {
+    text-align: end;
+}

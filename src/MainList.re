@@ -12,19 +12,17 @@ let make = () =>
       <RoundButton asset=realoadIcon />
       <RoundButton asset=moreIcon />
     </header>
-    <body>
-      <ul>
-        <li> "Tweet"->str </li>
-        <li> "Tweet"->str </li>
-        <li> "Tweet"->str </li>
-        <li> "Tweet"->str </li>
-        <li> "Tweet"->str </li>
-        <li> "Tweet"->str </li>
-        <li> "Tweet"->str </li>
-        <li> "Tweet"->str </li>
-        <li> "Tweet"->str </li>
-        <li> "Tweet"->str </li>
+    <body className="listBody">
+      <ul className="list">
+        <ListItem />
+        <ListItem />
+        <ListItem />
+        <ListItem />
+        <ListItem />
+        <ListItem />
       </ul>
     </body>
-    <footer> "footer"->str </footer>
+    <footer className="listFooter">
+      "something about avaliable space in memory"->str
+    </footer>
   </main>;
