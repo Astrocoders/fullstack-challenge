@@ -5,7 +5,7 @@ requireStyle("styles/SideMenu.css");
 
 [@react.component]
 let make = () =>
-  <asside className="sideMenu">
+  <nav className="sideMenu">
     <div className="topSideMenu"> <ComposeButton /> </div>
     <ul className="listSideMenu">
       <MenuItem
@@ -28,4 +28,4 @@ let make = () =>
       <MenuItem name="Notes" asset=markIcon />
       <MenuItem name="More" asset=markIcon />
     </ul>
-  </asside>;
+  </nav>;

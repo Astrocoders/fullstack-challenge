@@ -12,7 +12,7 @@ let make = () =>
       <RoundButton asset=realoadIcon />
       <RoundButton asset=moreIcon />
     </header>
-    <body className="listBody">
+    <div className="listBody">
       <ul className="list">
         <ListItem />
         <ListItem />
@@ -21,7 +21,7 @@ let make = () =>
         <ListItem />
         <ListItem />
       </ul>
-    </body>
+    </div>
     <footer className="listFooter">
       "something about avaliable space in memory"->str
     </footer>
