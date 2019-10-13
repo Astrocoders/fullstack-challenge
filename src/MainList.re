@@ -77,8 +77,17 @@ let make = () => {
            <ul className="list">
              {switch (simple) {
               | Loading => <h2> "Loading..."->str </h2>
-              | Data(data) => <h2> "Data..."->str </h2>
-                // data
+              | Data(data) =>
+                  <ListItem
+                    key="1"
+                    data={Option.getExn(data##npm##package)}
+                    onClickCallback={(value, evt) => {
+                      dispatch(SetDetail(value));
+                      dispatch(ShowDetail(true));
+                    }}
+                  />
+
+                // data##[whatever list]
                 // ->Option.getExn
                 // ->Array.map(dataRecord => dataRecord->Option.getExn)
                 // ->Array.map(dataRecord =>
