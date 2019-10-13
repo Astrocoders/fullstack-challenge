@@ -16,11 +16,11 @@ let initialState = {
   renderedList: true,
   toogledFunction: false,
   dataIndetail: {
-    number: "",
     name: "",
-    classification: "",
+    homepage: "",
+    description: "",
   },
-  listOnDisplay: [|{number: "", name: "", classification: ""}|],
+  listOnDisplay: [|{name: "", homepage: "", description: ""}|],
 };
 
 type action =
@@ -39,13 +39,15 @@ let reducer = (state, action) =>
 
 module ApiQueryConfig = [%graphql
   {|
-    {
-      pokemons(first: 40) @bsRecord{
-        number @bsDecoder(fn: "Option.getExn")
-        name @bsDecoder(fn: "Option.getExn")
-        classification @bsDecoder(fn: "Option.getExn")
-      }
+{
+  npm {
+    package(name: "graphql") @bsRecord{
+      name @bsDecoder(fn: "Option.getExn")
+      homepage @bsDecoder(fn: "Option.getExn")
+      description @bsDecoder(fn: "Option.getExn")
     }
+  }
+}
 |}
 ];
 
@@ -67,29 +69,29 @@ let make = () => {
        ? <div
            className="dataDetailCard"
            onClick={_ => dispatch(ShowDetail(false))}>
-           <h3> state.dataIndetail.number->str </h3>
-           <h1> state.dataIndetail.name->str </h1>
-           <h3> state.dataIndetail.classification->str </h3>
+           <h3> state.dataIndetail.name->str </h3>
+           <h1> state.dataIndetail.homepage->str </h1>
+           <h3> state.dataIndetail.description->str </h3>
          </div>
        : <div className="listBody">
            <ul className="list">
              {switch (simple) {
               | Loading => <h2> "Loading..."->str </h2>
-              | Data(data) =>
-                data##pokemons
-                ->Option.getExn
-                ->Array.map(dataRecord => dataRecord->Option.getExn)
-                ->Array.map(dataRecord =>
-                    <ListItem
-                      key={dataRecord.number}
-                      data=dataRecord
-                      onClickCallback={(value, evt) => {
-                        dispatch(SetDetail(value));
-                        dispatch(ShowDetail(true));
-                      }}
-                    />
-                  )
-                ->React.array
+              | Data(data) => <h2> "Data..."->str </h2>
+                // data
+                // ->Option.getExn
+                // ->Array.map(dataRecord => dataRecord->Option.getExn)
+                // ->Array.map(dataRecord =>
+                //     <ListItem
+                //       key={dataRecord.number}
+                //       data=dataRecord
+                //       onClickCallback={(value, evt) => {
+                //         dispatch(SetDetail(value));
+                //         dispatch(ShowDetail(true));
+                //       }}
+                //     />
+                //   )
+                // ->React.array
               | NoData
               | Error(_) => <h2> "Error..."->str </h2>
               }}

@@ -1,8 +1,8 @@
 // representing Pokemons right now
 type dataRecord = {
-  number: string,
   name: string,
-  classification: string,
+  homepage: string,
+  description: string,
 };
 
 type dataList = array(dataRecord);

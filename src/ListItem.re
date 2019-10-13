@@ -11,9 +11,9 @@ let make = (~data: dataRecord=?, ~onClickCallback: (_, 'a) => unit) =>
     <ToogleButton asset=unfavoritedIcon toogled=starIcon />
     <RoundButton asset=flagIcon />
     <div className="listInfo" onClick={onClickCallback(data)}>
-      <span className="info infoAuthor"> data.number->str </span>
-      <span className="info infoTitle"> data.name->str </span>
-      <span className="info infoContent"> data.classification->str </span>
+      <span className="info infoAuthor"> data.name->str </span>
+      <span className="info infoTitle"> data.homepage->str </span>
+      <span className="info infoContent"> data.description->str </span>
       <span className="info infoData"> "Data"->str </span>
     </div>
   </li>;
