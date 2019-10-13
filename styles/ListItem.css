@@ -1,7 +1,13 @@
 .listItem {
+    cursor: pointer;
     list-style: none;
     border-bottom: 2px solid #eeeeee;
     display: flex;
+}
+
+.listItem:hover {
+    background-color: #eeeeee;
+    border-bottom: 2px solid #cccccc;
 }
 
 .listInfo {

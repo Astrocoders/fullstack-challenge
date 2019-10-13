@@ -3,7 +3,12 @@ open Utils;
 requireStyle("styles/RoundButton.css");
 
 [@react.component]
-let make = (~asset: asset=?, ~roundness: string="50%") => {
+let make =
+    (
+      ~asset: asset=?,
+      ~roundness: string="50%",
+      ~onClick: ReactEvent.Mouse.t => unit=?,
+    ) => {
   let url = "url(" ++ getURI(asset) ++ ")";
   <input
     style={ReactDOMRe.Style.make(
@@ -15,5 +20,6 @@ let make = (~asset: asset=?, ~roundness: string="50%") => {
     )}
     className="roundButton"
     type_="button"
+    onClick
   />;
 };

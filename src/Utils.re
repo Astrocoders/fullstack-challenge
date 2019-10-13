@@ -26,4 +26,5 @@ module Assets = {
   let dropdownIcon = requireAsset("assets/dropdowIcon.png");
   let uncheckedIcon = requireAsset("assets/uncheckedIcon.png");
   let unfavoritedIcon = requireAsset("assets/unfavoritedIcon.png");
+  let checkedIcon = requireAsset("assets/checkedIcon.png");
 };

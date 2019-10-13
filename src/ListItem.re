@@ -1,18 +1,19 @@
 open Utils;
 open Utils.Assets;
+open Types;
 
 requireStyle("styles/ListItem.css");
 
 [@react.component]
-let make = () =>
+let make = (~data: dataRecord=?, ~onClickCallback: (_, 'a) => unit) =>
   <li className="listItem">
-    <RoundButton asset=uncheckedIcon />
-    <RoundButton asset=unfavoritedIcon />
+    <ToogleButton asset=uncheckedIcon toogled=checkedIcon />
+    <ToogleButton asset=unfavoritedIcon toogled=starIcon />
     <RoundButton asset=flagIcon />
-    <div className="listInfo">
-      <span className="info infoAuthor"> "Autor"->str </span>
-      <span className="info infoTitle"> "Titulo"->str </span>
-      <span className="info infoContent"> "Conteudo"->str </span>
+    <div className="listInfo" onClick={onClickCallback(data)}>
+      <span className="info infoAuthor"> data.number->str </span>
+      <span className="info infoTitle"> data.name->str </span>
+      <span className="info infoContent"> data.classification->str </span>
       <span className="info infoData"> "Data"->str </span>
     </div>
   </li>;
