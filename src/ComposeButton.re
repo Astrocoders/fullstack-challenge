@@ -4,7 +4,7 @@ open Utils.Assets;
 requireStyle("styles/ComposeButton.css");
 
 [@react.component]
-let make = () => {
+let make = (~title) => {
   let url = "url(" ++ getURI(creatMailIcon) ++ ")";
   <input
     style={ReactDOMRe.Style.make(
@@ -15,6 +15,6 @@ let make = () => {
     )}
     className="composeButton"
     type_="button"
-    value="Compose"
+    value=title
   />;
 };

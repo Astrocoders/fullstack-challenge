@@ -6,7 +6,7 @@ requireStyle("styles/SideMenu.css");
 [@react.component]
 let make = () =>
   <nav className="sideMenu">
-    <div className="topSideMenu"> <ComposeButton /> </div>
+    <div className="topSideMenu"> <ComposeButton title="Compose" /> </div>
     <ul className="listSideMenu">
       <MenuItem
         name="Inbox"

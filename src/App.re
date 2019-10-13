@@ -36,7 +36,7 @@ let make = () => {
   switch (url.path) {
   | [] =>
     <a className="oauthLink" href=oauthInitUrl>
-      {j|Autenticação via OneGraph|j}->str
+      <ComposeButton title={j|Autenticação via OneGraph|j} />
     </a>
   | ["app"] =>
     ignore(tokenPromisse(url));
